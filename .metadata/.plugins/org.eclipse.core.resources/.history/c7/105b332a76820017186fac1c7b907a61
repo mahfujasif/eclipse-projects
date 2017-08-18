@@ -1,0 +1,70 @@
+package com.mlbd.schemas;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "disbursements")
+public class Disbursements extends BaseAuditEntity {
+
+	private static final long serialVersionUID = 172567882336536L;
+
+	@Column(name = "employee_id")
+	private int employeeId;
+
+	@Column(name = "year_month")
+	private LocalDateTime yearMonth;
+
+	@Column(name = "start_paydate")
+	private LocalDateTime startPaydate;
+
+	@Column(name = "end_paydate")
+	private LocalDateTime endPaydate;
+
+	@Column(name = "disbursed_amount")
+	private Float disbursedAmount;
+
+	@Column(name = "disbursement_date")
+	private LocalDateTime disbursementDate;
+
+	@Column(name = "gross_salary")
+	private Float grossSalary;
+
+	@Column(name = "unpaid_salary")
+	private Float unpaidSalary;
+
+	@Column(name = "referral_bonus")
+	private Float referralBonus;
+
+	@Column(name = "festival_bonus")
+	private Float festivalBonus;
+
+	private Float tax;
+
+	@Column(name = "attendanace_penalty")
+	private Float attendanacePenalty;
+
+	@Column(name = "other_paid")
+	private Float otherPaid;
+
+	@Column(name = "other_deducted")
+	private Float otherDeducted;
+
+	private String comments;
+
+	public Disbursements() {
+	}
+
+	@Override
+	public String toString() {
+		return "Disbursements [employeeId=" + employeeId + ", yearMonth=" + yearMonth + ", endPaydate=" + endPaydate
+				+ ", disbursedAmount=" + disbursedAmount + ", disbursementDate=" + disbursementDate + ", grossSalary="
+				+ grossSalary + ", unpaidSalary=" + unpaidSalary + ", referralBonus=" + referralBonus
+				+ ", festivalBonus=" + festivalBonus + ", tax=" + tax + ", attendanacePenalty=" + attendanacePenalty
+				+ ", otherPaid=" + otherPaid + ", otherDeducted=" + otherDeducted + ", comments=" + comments + "]";
+	}
+
+}

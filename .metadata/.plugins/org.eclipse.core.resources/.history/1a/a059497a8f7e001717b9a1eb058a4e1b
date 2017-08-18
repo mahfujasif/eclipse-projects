@@ -1,0 +1,10 @@
+package com.mlbd.schemas;
+
+@Entity
+@Table(name = "users")
+public class Users {
+	
+	private int id;
+	
+	private String email;
+}

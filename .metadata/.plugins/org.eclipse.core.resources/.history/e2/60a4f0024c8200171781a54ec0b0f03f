@@ -1,0 +1,9 @@
+package com.mlbd.schemas;
+
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+public abstract class BaseAuditEntity extends BaseEntity{
+	
+	
+}

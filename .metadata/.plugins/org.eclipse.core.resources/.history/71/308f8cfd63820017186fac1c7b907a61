@@ -1,0 +1,8 @@
+# ========================================
+# = Database Configuration
+# ========================================
+
+database.driver = com.mysql.jdbc.Driver
+database.url = jdbc:mysql://127.0.0.1/tokup?createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8
+database.username = root
+database.password =

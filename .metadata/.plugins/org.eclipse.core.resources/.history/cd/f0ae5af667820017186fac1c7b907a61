@@ -1,0 +1,9 @@
+# ===============================
+# = SERVER
+# ===============================
+server.port=8080
+
+spring.datasource.url=jdbc:mysql://127.0.0.1/mlbd_auth?createDatabaseIfNotExist=true&useUnicode=yes&characterEncoding=UTF-8
+
+# For absorbing the changes while build the app
+liquibase.change-log=classpath:/liquibase/master.xml

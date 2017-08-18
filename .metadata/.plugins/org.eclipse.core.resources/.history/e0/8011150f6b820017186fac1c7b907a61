@@ -1,0 +1,40 @@
+package com.mlbd.schemas;
+
+import java.io.Serializable;
+
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+/**
+ * This is base entity model contains only primary key field.
+ */
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class BaseEntity implements Serializable{
+
+	private static final long serialVersionUID = -8347278051014894423L;
+	
+	@Id
+	@GeneratedValue(strategy =  GenerationType.IDENTITY)
+	private int id;
+
+	public int getId() {
+		return id;
+	}
+
+	public BaseEntity setId(int id) {
+		this.id = id;
+		return this;
+	}
+
+	@Override
+	public String toString() {
+		return "BaseEntity [id=" + id + "]";
+	}
+	
+}

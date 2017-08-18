@@ -1,0 +1,11 @@
+package com.mlbd;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MLBDAuthApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(MLBDAuthApplication.class);
+    }
+}

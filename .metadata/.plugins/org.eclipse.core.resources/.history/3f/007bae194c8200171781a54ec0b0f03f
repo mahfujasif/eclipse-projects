@@ -1,0 +1,11 @@
+package com.mlbd.schemas;
+
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
+public abstract class BaseAuditEntity extends BaseEntity{
+
+	private static final long serialVersionUID = 5232841302185508325L;
+	
+	
+}

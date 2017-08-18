@@ -1,0 +1,9 @@
+--liquibase formatted sql
+--changeset leon:initialize_databse
+--comment configure mlbd_auth database with collection , charset & engine
+
+ALTER DATABASE `mlbd_auth`
+	DEFAULT CHARACTER SET utf8mb4
+	COLLATE utf8mb4_general_ci;
+
+SET default_storage_engine=INNODB;

@@ -1,0 +1,97 @@
+package com.mlbd.schemas;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "roles")
+public class Roles extends BaseAuditEntity {
+
+	private static final long serialVersionUID = -8510382091684161517L;
+
+	private int type;
+
+	@Column(name = "created_by")
+	private int createdBy;
+
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;
+
+	@Column(name = "updated_by")
+	private int updatedBy;
+
+	@Column(name = "updated_at")
+	private LocalDateTime updatedAt;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	private Users users;
+	
+	public Roles() {
+	}
+
+	public int getType() {
+		return type;
+	}
+
+	public Roles setType(int type) {
+		this.type = type;
+		return this;
+	}
+
+	public int getCreatedBy() {
+		return createdBy;
+	}
+
+	public Roles setCreatedBy(int createdBy) {
+		this.createdBy = createdBy;
+		return this;
+	}
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public Roles setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+		return this;
+	}
+
+	public int getUpdatedBy() {
+		return updatedBy;
+	}
+
+	public Roles setUpdatedBy(int updatedBy) {
+		this.updatedBy = updatedBy;
+		return this;
+	}
+
+	public LocalDateTime getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public Roles setUpdatedAt(LocalDateTime updatedAt) {
+		this.updatedAt = updatedAt;
+		return this;
+	}
+
+	public Users getUsers() {
+		return users;
+	}
+
+	public Roles setUsers(Users users) {
+		this.users = users;
+		return this;
+	}
+
+	@Override
+	public String toString() {
+		return "Roles [type=" + type + ", createdBy=" + createdBy + ", createdAt=" + createdAt + ", updatedBy="
+				+ updatedBy + ", updatedAt=" + updatedAt + "]";
+	}
+
+}

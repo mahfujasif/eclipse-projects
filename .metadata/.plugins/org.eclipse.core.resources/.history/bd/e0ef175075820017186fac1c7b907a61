@@ -1,0 +1,53 @@
+package com.mlbd.schemas;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "disbursements")
+public class Disbursements extends BaseAuditEntity{
+
+	@Column(name = "employee_id")
+	private int employeeId;
+	
+	@Column(name = "year_month")
+	private LocalDateTime yearMonth;
+	
+	@Column(name = "end_paydate")
+	private LocalDateTime endPaydate;
+	
+	@Column(name = "disbursed_amount")
+	private Float disbursedAmount;
+	
+	@Column(name = "disbursement_date")
+	private LocalDateTime disbursementDate;
+	
+	@Column(name = "gross_salary")
+	private Float grossSalary;
+	
+	@Column(name = "unpaid_salary")
+	private Float unpaidSalary;
+	
+	@Column(name = "referral_bonus")
+	private Float referralBonus;
+	
+	@Column(name = "festival_bonus")
+	private Float festivalBonus;
+	
+	private Float tax;
+	
+	@Column(name = "attendanace_penalty")
+	private Float attendanacePenalty;
+	
+	@Column(name = "other_paid")
+	private Float otherPaid;
+	
+	@Column(name = "other_deducted")
+	private Float otherDeducted;
+	
+	private String comments;
+	
+}

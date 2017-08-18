@@ -1,0 +1,12 @@
+package com.mlbd.schemas;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Users {
+	
+	private int id;
+	
+	private String email;
+}
+
